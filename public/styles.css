@@ -1,0 +1,42 @@
+body {
+    background: #222;
+    font-family: -apple-system, BlinkMacSystemFont, avenir next, avenir, segoe ui,
+        helvetica neue, helvetica, Ubuntu, roboto, noto, arial, sans-serif;
+    color: hotpink;
+    position: absolute;
+    width: 98vw;
+    height: 97vh;
+    top: 0;
+    left: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+}
+
+h1 {
+    font-size: 2rem;
+}
+
+input {
+    appearance: none;
+    -webkit-appearance: none;
+    border: 0;
+    font-size: 0.9rem;
+    background: white;
+    font-weight: bold;
+    border-radius: 50%;
+    color: hotpink;
+    padding: 1rem;
+    cursor: pointer;
+}
+input:hover{
+    background: rgba(255, 255, 255, 0.808);
+}
+
+footer {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+}

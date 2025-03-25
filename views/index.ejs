@@ -1,0 +1,40 @@
+<!-- Include Header -->
+<%- include("partials/header.ejs") %>
+
+<div class="min-h-screen flex items-center justify-center bg-gradient-to-br from-blue-100 to-purple-200 p-6">
+    <div class="w-full max-w-lg bg-white/90 backdrop-blur-md rounded-2xl shadow-2xl p-8 transform hover:scale-105 transition-all duration-300">
+        
+        <% if (locals.Radj && locals.Rnoun) { %>
+            <div class="text-center space-y-6">
+                <h2 class="text-gray-600 text-sm uppercase tracking-wider font-medium">Your Generated Name:</h2>
+                <h1 class="text-4xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-indigo-600 to-pink-600 mt-2">
+                    <%= Radj %> <%= Rnoun %>
+                </h1>
+                <form action="/generate" method="post">
+                    <button type="submit" 
+                        class="w-full bg-gradient-to-r from-indigo-600 to-pink-600 text-white font-semibold px-8 py-3 rounded-xl
+                        hover:opacity-90 transform hover:scale-105 transition-all duration-200 shadow-lg
+                        focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500 focus:outline-none">
+                        Generate Another Name
+                    </button>
+                </form>
+            </div>
+        <% } else { %>
+            <div class="text-center space-y-6 flex flex-col justify-center items-center w-full">
+                <h1 class="text-3xl font-bold text-gray-800">Welcome to the Random Name Generator 🤘</h1>
+                <p class="mt-4 text-gray-600">Click the button below to generate a unique and creative name!</p>
+                <form action="/generate" method="post">
+                    <button type="submit" 
+                        class="w-full text-xl bg-gradient-to-r from-indigo-600 to-pink-600 text-white font-semibold px-8 py-3 rounded-xl
+                        hover:opacity-90 transform hover:scale-105 transition-all duration-200 shadow-lg
+                        focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500 focus:outline-none">
+                        Generate Name
+                    </button>
+                </form>
+            </div>
+        <% } %>
+    </div>
+</div>
+
+<!-- Include Footer -->
+<%- include("partials/footer.ejs") %>
